@@ -84,15 +84,23 @@ export default function Page() {
       .then((data) => setCarriers(data));
   }, []);
 
+  // useEffect(() => {
+  //   const carrier = carriers.find((c) => c.carrier_id === selectedCarrier);
+  //   setServices(carrier?.services || []);
+  //   setPackagesAvailable(carrier?.packages || []);
+  // }, [selectedCarrier, carriers]);
   useEffect(() => {
     const carrier = carriers.find((c) => c.carrier_id === selectedCarrier);
     setServices(carrier?.services || []);
     setPackagesAvailable(carrier?.packages || []);
+    setSelectedService(""); // reset
+    setSelectedPackage(""); // reset
   }, [selectedCarrier, carriers]);
 
   async function onSubmit(data: FormValues) {
     const body = {
       shipment: {
+        carrier_id: selectedCarrier,
         service_code: selectedService,
         package_code: selectedPackage || "package",
         ship_from: data.shipFrom,
