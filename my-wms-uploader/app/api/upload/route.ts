@@ -1,3 +1,5 @@
+export const runtime = "nodejs";
+
 import { NextResponse } from "next/server";
 import sharp from "sharp";
 import { prisma } from "../../../lib/prisma";
