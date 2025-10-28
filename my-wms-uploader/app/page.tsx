@@ -18,80 +18,82 @@ import {
   ScanBarcode,
   AlertCircle,
   FileText,
+  RefreshCcw,
+  ListCheck,
 } from "lucide-react";
 
 const WMSDashboard = () => {
   const menuItems = [
     {
-      icon: Package,
+      icon: ListCheck,
       label: "Inventory",
-      color: "bg-gradient-to-t bg-gradient from-violet-600 to-blue-500",
+      color: "bg-gradient-to-t bg-gradient from-blue-600 to-blue-500",
       href: "/inventory",
     },
     {
       icon: ShoppingCart,
       label: "Orders",
-      color: "bg-gradient-to-t bg-gradient from-violet-600 to-blue-500",
+      color: "bg-gradient-to-t bg-gradient from-blue-600 to-blue-500",
       href: "/orders",
     },
     {
       icon: ClipboardList,
       label: "Picking",
-      color: "bg-gradient-to-t bg-gradient from-violet-600 to-blue-500",
+      color: "bg-gradient-to-t bg-gradient from-blue-600 to-blue-500",
       href: "/picking",
     },
     {
       icon: PackageCheck,
       label: "Packing",
-      color: "bg-gradient-to-t bg-gradient from-violet-600 to-blue-500",
+      color: "bg-gradient-to-t bg-gradient from-blue-600 to-blue-500",
       href: "/packing",
     },
     {
       icon: Truck,
       label: "Shipping",
-      color: "bg-gradient-to-t bg-gradient from-violet-600 to-blue-500",
+      color: "bg-gradient-to-t bg-gradient from-blue-600 to-blue-500",
       href: "/shipping",
     },
     {
-      icon: PackageOpen,
+      icon: ScanBarcode,
       label: "Receiving",
-      color: "bg-gradient-to-t bg-gradient from-violet-600 to-blue-500",
+      color: "bg-gradient-to-t bg-gradient from-blue-600 to-blue-500",
       href: "/receiving",
     },
     {
       icon: MapPin,
       label: "Locations",
-      color: "bg-gradient-to-t bg-gradient from-violet-600 to-blue-500",
+      color: "bg-gradient-to-t bg-gradient from-blue-600 to-blue-500",
       href: "/locations",
     },
     {
-      icon: CheckCircle2,
+      icon: RefreshCcw,
       label: "Cycle Count",
-      color: "bg-gradient-to-t bg-gradient from-violet-600 to-blue-500",
+      color: "bg-gradient-to-t bg-gradient from-blue-600 to-blue-500",
       href: "/cycle-count",
     },
     {
       icon: RotateCcw,
       label: "Returns",
-      color: "bg-gradient-to-t bg-gradient from-violet-600 to-blue-500",
+      color: "bg-gradient-to-t bg-gradient from-blue-600 to-blue-500",
       href: "/returns",
     },
     {
       icon: Users,
       label: "Staff",
-      color: "bg-gradient-to-t bg-gradient from-violet-600 to-blue-500",
+      color: "bg-gradient-to-t bg-gradient from-blue-600 to-blue-500",
       href: "/staff",
     },
     {
       icon: BarChart3,
       label: "Reports",
-      color: "bg-gradient-to-t bg-gradient from-violet-600 to-blue-500",
+      color: "bg-gradient-to-t bg-gradient from-blue-600 to-blue-500",
       href: "/reports",
     },
     {
       icon: Settings,
       label: "Settings",
-      color: "bg-gradient-to-t bg-gradient from-violet-600 to-blue-500",
+      color: "bg-gradient-to-t bg-gradient from-blue-600 to-blue-500",
       href: "/settings",
     },
   ];
@@ -138,7 +140,7 @@ const WMSDashboard = () => {
       </div>
 
       {/* 2-Column Grid Menu */}
-      <div className="p-6 pb-22">
+      <div className="p-6 pb-24">
         <div className="grid grid-cols-2 gap-4">
           {menuItems.map((item, index) => (
             <button
@@ -147,7 +149,7 @@ const WMSDashboard = () => {
               onClick={() => console.log(`Navigate to ${item.href}`)}
             >
               <div className={`${item.color} p-4 rounded-full`}>
-                <item.icon className="w-8 h-8 text-white" strokeWidth={2.5} />
+                <item.icon className="w-8 h-8 text-white" />
               </div>
               <span className="text-sm font-semibold text-gray-700">
                 {item.label}
