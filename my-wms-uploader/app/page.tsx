@@ -1526,7 +1526,7 @@ const WMSCostBreakdown = () => {
                           For developers who deploy code
                         </p>
                       </div>
-                      <div className="text-3xl font-bold text-black">
+                      <div className="text-3xl font-bold text-gray-800">
                         $20<span className="text-lg text-slate-500">/seat</span>
                       </div>
                     </div>
